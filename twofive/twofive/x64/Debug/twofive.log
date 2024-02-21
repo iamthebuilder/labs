@@ -1,0 +1,3 @@
+﻿  twofive.cpp
+D:\OneDrive\Рабочий стол\labs for git\twofive\twofive\twofive.cpp(52,12): warning C4244: аргумент: преобразование "time_t" в "unsigned int", возможна потеря данных
+  twofive.vcxproj -> D:\OneDrive\Рабочий стол\labs for git\twofive\x64\Debug\twofive.exe
