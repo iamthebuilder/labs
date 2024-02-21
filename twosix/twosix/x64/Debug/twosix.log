@@ -1,0 +1,6 @@
+﻿  twosix.cpp
+D:\OneDrive\Рабочий стол\twosix\twosix\twosix.cpp(28,14): warning C4244: =: преобразование "double" в "int", возможна потеря данных
+D:\OneDrive\Рабочий стол\twosix\twosix\twosix.cpp(70,14): warning C4244: +=: преобразование "double" в "int", возможна потеря данных
+D:\OneDrive\Рабочий стол\twosix\twosix\twosix.cpp(73,12): warning C4244: +=: преобразование "double" в "int", возможна потеря данных
+D:\OneDrive\Рабочий стол\twosix\twosix\twosix.cpp(76,13): warning C4244: +=: преобразование "double" в "int", возможна потеря данных
+  twosix.vcxproj -> D:\OneDrive\Рабочий стол\twosix\x64\Debug\twosix.exe
