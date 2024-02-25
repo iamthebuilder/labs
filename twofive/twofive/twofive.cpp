@@ -15,7 +15,7 @@ struct stack_2   //стек_2
 	int size_2;
 };
 
-char pop_1(stack_1& list_1) { //Снятие элемента с вершины стека
+char pop_1(stack_1& list_1) { //удаление
 	if (list_1.size_1 == 0) {
 		return 0;
 	}
@@ -23,7 +23,7 @@ char pop_1(stack_1& list_1) { //Снятие элемента с вершины 
 	return list_1.data_1[list_1.size_1];
 }
 
-char pop_2(stack_2& list_2) { //Снятие элемента с вершины стека
+char pop_2(stack_2& list_2) { 
 	if (list_2.size_2 == 0) {
 		return 0;
 	}
