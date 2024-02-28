@@ -14,30 +14,29 @@ void    print_tree(TREE*);
 void    print_tree_level(TREE*, int);
 void    del_tree(TREE*& top);
 int dimension(int dim);
-int fill_tree(int* save, int dim,int max);
+void fill_tree(int* save, int dim);
 TREE* delete_node(TREE* top, int max);
 TREE* min_node(TREE* node);
+int find_max(TREE* top);
 
 int main()
 {
-	int max = 0;
 	int dim = 0;
 	dim = dimension(dim);
 	int* save = new int[dim];
-	max = fill_tree(save, dim,max);
-	cout << "The max el is " << max;
-	cout << endl;
+	fill_tree(save, dim);
 	TREE* top = NULL;
 
 	for (int i = 0; i < dim; i++)
 		add(top, save[i]);  // добавление узлов дерева
-
 	cout << " Tree " << endl;
 	print_tree(top);     // вывод элементов дерева на экран
 	cout << endl << endl;
 	print_tree_level(top, 0);
 	cout << " New tree ";
-	delete_node(top, max);
+	int for_del = find_max(top);
+	cout << " Max el is " << for_del <<endl;
+	delete_node(top,for_del);
 	print_tree(top);     // вывод элементов дерева на экран
 	cout << endl << endl;
 	print_tree_level(top, 0);
@@ -98,7 +97,7 @@ TREE* delete_node(TREE* top, int max) {
 TREE* min_node(TREE* node) {
 	TREE* current = node;
 
-	while (current->left != NULL) //самый левый в правом поддеревн будет минимальный
+	while (current->left != NULL) //самый левый в правом поддереве будет минимальный
 		current = current->left;
 
 	return current;
@@ -127,6 +126,25 @@ void add(TREE*& top, int num)
 		//присоединение к правому поддереву предка
 	}
 }
+	int find_max(TREE * top)
+	{
+		int maximum = 0;
+		if (top == nullptr) {
+			return NULL;
+		}
+		int left_max = find_max(top->left);
+		int right_max = find_max(top->right);
+		int max_both = 0;
+		max_both = max(left_max, right_max);
+		if (max_both < top->d) {
+			maximum = top->d;
+		}
+		else {
+			maximum = max_both;
+		}
+		return maximum;
+	}
+
 
 // обход дерева и вывод значений в отсортированном порядке
 void print_tree(TREE* top)
@@ -173,16 +191,11 @@ int dimension(int dim)
 	return dim;
 }
 
-int fill_tree(int* save, int dim,int max)
+void fill_tree(int* save, int dim)
 {
-	max = save[0];
 	cout << "Enter the unique nums ";
 	for (int i = 0; i < dim; i++)
 	{  
 		cin >> save[i];
-		if (save[i] > max) {
-			max = save[i];
-		}
 	}
-	return max;
 }
