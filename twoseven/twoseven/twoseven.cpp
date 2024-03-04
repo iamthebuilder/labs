@@ -36,7 +36,7 @@ int main()
 	cout << " New tree ";
 	int for_del = find_max(top);
 	cout << " Max el is " << for_del <<endl;
-	delete_node(top,for_del);
+	top = delete_node(top, for_del);
 	print_tree(top);     // вывод элементов дерева на экран
 	cout << endl << endl;
 	print_tree_level(top, 0);
@@ -83,12 +83,12 @@ TREE* delete_node(TREE* top, int max) {
 			delete top;
 			return temp;
 		}
-		else if (top->right == NULL && top->left == NULL) {
-			delete top;
+		else {
+			TREE* temp = min_node(top->right);
+			top->d = temp->d;
+			top->right = delete_node(top->right, temp->d);//удаляем тот самый минимальный элемент из правого поддерева
+			return top;
 		}
-		TREE* temp = min_node(top->right);
-		top->d = temp->d;
-		top->right = delete_node(top->right, temp->d);//удаляем тот самый минимальный элемент из правого поддерева
 	}
 	return top;
 }
@@ -128,21 +128,10 @@ void add(TREE*& top, int num)
 }
 	int find_max(TREE * top)
 	{
-		int maximum = 0;
-		if (top == nullptr) {
-			return NULL;
-		}
-		int left_max = find_max(top->left);
-		int right_max = find_max(top->right);
-		int max_both = 0;
-		max_both = max(left_max, right_max);
-		if (max_both < top->d) {
-			maximum = top->d;
-		}
-		else {
-			maximum = max_both;
-		}
-		return maximum;
+		while (top->right != NULL) //самый левый в правом поддереве будет минимальный
+			top = top->right;
+
+		return top->d;
 	}
 
 
