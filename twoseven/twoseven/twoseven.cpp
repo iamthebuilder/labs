@@ -86,7 +86,7 @@ TREE* delete_node(TREE* top, int max) {
 		else {
 			TREE* temp = min_node(top->right);
 			top->d = temp->d;
-			top->right = delete_node(top->right, temp->d);//удаляем тот самый минимальный элемент из правого поддерева
+			top->right = delete_node(top->right, temp->d);
 			return top;
 		}
 	}
