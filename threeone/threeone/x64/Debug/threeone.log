@@ -1,0 +1,5 @@
+﻿  Functions.cpp
+  threeone.cpp
+D:\OneDrive\Рабочий стол\labs for git\threeone\threeone\threeone.cpp(5,13): warning C4244: аргумент: преобразование "time_t" в "unsigned int", возможна потеря данных
+  Создание кода...
+  threeone.vcxproj -> D:\OneDrive\Рабочий стол\labs for git\threeone\x64\Debug\threeone.exe
