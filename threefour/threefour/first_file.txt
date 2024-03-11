@@ -1,0 +1,2 @@
+Vlad	23	r	1	2
+mam	56	er	2	1
