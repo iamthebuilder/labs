@@ -13,34 +13,28 @@ void create_stream(ofstream& outfile, int n)
 }
 
 
-void merge(ofstream& result, ifstream& first_file, ifstream& second_file, int fir_num, int sec_num) {
-    int index_1 = 0;
-    int index_2 = 0;
+void merge(ofstream& result, ifstream& first_file, ifstream& second_file) {
     double num_1 = 0;
     double num_2 = 0;
     first_file >> num_1;
     second_file >> num_2;
-    while (index_1 < fir_num && index_2 < sec_num) {
+    while (!first_file.eof() && !second_file.eof()) {
         if (num_1 >= num_2) {
             result << num_1 << endl;
-            index_1++;
             first_file >> num_1;
         }
         else
         {
             result << num_2 << endl;
-            index_2++;
             second_file >> num_2;
         }
     }
-    while (index_1 < fir_num) {
+    while (!first_file.eof()) {
         result << num_1 << endl;
-        index_1++;
         first_file >> num_1;
     }
-    while (index_2 < sec_num) {
+    while (!second_file.eof()) {
         result << num_2 << endl;
-        index_2++;
         second_file >> num_2;
     }
 }
