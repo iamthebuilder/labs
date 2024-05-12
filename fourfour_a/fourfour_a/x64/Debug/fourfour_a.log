@@ -1,0 +1,13 @@
+﻿  fourfour_a.cpp
+D:\OneDrive\Рабочий стол\Лабы\fourfour_a\fourfour_a\Header.h(134,19): warning C4244: аргумент: преобразование "time_t" в "unsigned int", возможна потеря данных
+  (компиляция исходного файла "fourfour_a.cpp")
+  D:\OneDrive\Рабочий стол\Лабы\fourfour_a\fourfour_a\Header.h(134,19):
+  контекст создания экземпляра шаблона (сначала самый старый)
+  	D:\OneDrive\Рабочий стол\Лабы\fourfour_a\fourfour_a\fourfour_a.cpp(8,20):
+  	выполняется компиляция ссылки на экземпляр класс шаблон функции "Vector<double>"
+  	D:\OneDrive\Рабочий стол\Лабы\fourfour_a\fourfour_a\Header.h(133,10):
+  	во время компиляции функции-члена класс шаблон "void Vector<double>::fillRand(void)"
+  		D:\OneDrive\Рабочий стол\Лабы\fourfour_a\fourfour_a\fourfour_a.cpp(46,22):
+  		см. первую ссылку на "Vector<double>::fillRand" в "main"
+  
+  fourfour_a.vcxproj -> D:\OneDrive\Рабочий стол\Лабы\fourfour_a\x64\Debug\fourfour_a.exe
