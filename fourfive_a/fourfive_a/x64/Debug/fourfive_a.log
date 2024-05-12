@@ -1,0 +1,5 @@
+﻿  fourfive_a.cpp
+D:\OneDrive\Рабочий стол\Лабы\fourfive_a\fourfive_a\Header.h(140,19): warning C4244: аргумент: преобразование "time_t" в "unsigned int", возможна потеря данных
+  (компиляция исходного файла "fourfive_a.cpp")
+  
+  fourfive_a.vcxproj -> D:\OneDrive\Рабочий стол\Лабы\fourfive_a\x64\Debug\fourfive_a.exe
