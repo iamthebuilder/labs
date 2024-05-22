@@ -1,5 +1,0 @@
-﻿  foursix_a.cpp
-D:\OneDrive\Рабочий стол\Лабы\foursix_a\foursix_a\Header.h(133,19): warning C4244: аргумент: преобразование "time_t" в "unsigned int", возможна потеря данных
-  (компиляция исходного файла "foursix_a.cpp")
-  
-  foursix_a.vcxproj -> D:\OneDrive\Рабочий стол\Лабы\foursix_a\x64\Debug\foursix_a.exe
